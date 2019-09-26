@@ -32,7 +32,7 @@ CREATE TABLE movies(
 const CREATE_MOVIE_RATINGS_TABLE = `
 CREATE TABLE movie_ratings(
   user_id integer not null,
-  movie_id integer not null,
+  movie_id integer REFERENCES movies(id) ON DELETE CASCADE ON UPDATE CASCADE not null,
   rating real not null,
   time_created text not null,
   primary key (user_id, movie_id)

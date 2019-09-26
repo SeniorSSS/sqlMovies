@@ -7,7 +7,7 @@ export interface Movie {
   cast: string[];
   homepage: string;
   directors: string[];
-  tagline?: string; //? iznemu
+  tagline?: string;
   keywords: string[];
   overview: string;
   runtime: number;

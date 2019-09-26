@@ -83,3 +83,7 @@ If you are stuck check out examples [@sqlzoo.net](https://sqlzoo.net) and [@w3sc
 More complex queries, mainly `joins` between tables.
 
 If you are stuck check out examples [@sqlzoo.net](https://sqlzoo.net) and [@w3schools.com](https://www.w3schools.com/sql/default.asp).
+
+### 08: Integrity
+
+Can movie review exist without the movie?

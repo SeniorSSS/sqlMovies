@@ -12,40 +12,40 @@ import { minutes, Log } from "./utils";
 
 const CREATE_MOVIE_GENRES_TABLE = `
 CREATE TABLE movie_genres(
-  movie_id integer not null,
-  genre_id integer not null,
+  movie_id integer REFERENCES movies(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
+  genre_id integer REFERENCES genres(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
   primary key (movie_id, genre_id)
 );
 `;
 
 const CREATE_MOVIE_ACTORS_TABLE = `
 CREATE TABLE movie_actors(
-  movie_id integer not null,
-  actor_id integer not null,
+  movie_id integer REFERENCES movies(id) ON DELETE RESTRICT ON UPDATE CASCADE  not null,
+  actor_id integer REFERENCES actors(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
   primary key (movie_id, actor_id)
 );
 `;
 
 const CREATE_MOVIE_DIRECTORS_TABLE = `
 CREATE TABLE movie_directors(
-  movie_id integer not null,
-  director_id integer not null,
+  movie_id integer REFERENCES movies(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
+  director_id integer REFERENCES directors(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
   primary key (movie_id, director_id)
 );
 `;
 
 const CREATE_MOVIE_KEYWORDS_TABLE = `
 CREATE TABLE movie_keywords(
-  movie_id integer not null,
-  keyword_id integer not null,
+  movie_id integer REFERENCES movies(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
+  keyword_id integer REFERENCES keywords(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
   primary key (movie_id, keyword_id)
 );
 `;
 
 const CREATE_MOVIE_PRODUCTION_COMPANIES_TABLE = `
 CREATE TABLE movie_production_companies(
-  movie_id integer not null,
-  company_id integer not null,
+  movie_id integer REFERENCES movies(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
+  company_id integer REFERENCES production_companies(id) ON DELETE RESTRICT ON UPDATE CASCADE not null,
   primary key (movie_id, company_id)
 );
 `;

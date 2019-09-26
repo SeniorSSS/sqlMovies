@@ -18,6 +18,30 @@ export const selectProductionCompany = (company: string): string => {
   return `SELECT * FROM production_companies WHERE company_name = '${company}'`
 };
 
+export const selectMovieById = (id: number): string => {
+  return `SELECT * FROM movies WHERE id = '${id}'`
+};
+
+export const selectGenreById = (id: number): string => {
+  return `SELECT genre FROM genres WHERE id = '${id}'`
+};
+
+export const selectDirectorById = (id: number): string => {
+  return `SELECT full_name FROM directors WHERE id = '${id}'`
+};
+
+export const selectActorById = (id: number): string => {
+  return `SELECT full_name FROM actors WHERE id = '${id}'`
+};
+
+export const selectKeywordById = (id: number): string => {
+  return `SELECT keyword FROM keywords WHERE id = '${id}'`
+};
+
+export const selectProductionCompanyById = (id: number): string => {
+  return `SELECT company_name FROM production_companies WHERE id = '${id}'`
+};
+
 export const selectMovie = (imdbId: string): string => {
   return `SELECT * FROM movies WHERE imdb_id = '${imdbId}'`
 };
@@ -52,7 +76,7 @@ export const selectProductionCompaniesByMovieId = (movieId: number): string => {
 
 /**
  * select count as c, because an object is returned and expected property name is c
-*/
+ */
 export const selectCount = (table: string): string => {
   return `SELECT COUNT(*) AS c FROM '${table}'`
 };

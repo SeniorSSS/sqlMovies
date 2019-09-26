@@ -7,9 +7,9 @@ import { Rating, Movie } from "./types";
 const DATA_DIR = resolve(__dirname, "../../_data");
 
 const toArray = (col: any): string[] => {
-  return _.uniq((col as string).split("|")
-    .map(it => it.trim()))
-    .filter(it => it.length > 0);
+  return _.uniq((col as string).split("|").map(it => it.trim())).filter(
+    it => it.length > 0
+  );
 };
 
 const toMovie = (line: any) => {
